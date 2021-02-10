@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-dlink-siren",
-  "version": "1.0.1",
-  "description": "Homebridge plugin for D-Link's DCH-S220 Wi-Fi Siren",
+  "name": "homebridge-dch-s160",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for D-Link's DCH-S160 Wi-Fi Water Detector",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,10 @@
   "engines": {
     "homebridge": ">=0.2.5"
   },
-  "homepage": "https://github.com/mtflud/homebridge-dchs220-siren",
+  "homepage": "https://github.com/bman46/homebridge-DCH-S160",
   "repository": { 
     "type" : "git", 
-    "url" : "https://github.com/mtflud/homebridge-dchs220-siren.git"
+    "url" : "https://github.com/bman46/homebridge-DCH-S160.git"
   },
   "author": "mtflud",
   "license": "ISC",
