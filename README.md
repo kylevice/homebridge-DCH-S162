@@ -1,5 +1,10 @@
 
-# Homebridge D-Link's DCH-S220 Wi-Fi enabled Siren Plugin
+# Homebridge D-Link's DCH-S160 Wi-Fi enabled Water Detector
+
+### STILL A WORK IN PROGRESS
+Forked from mtflud/homebridge-dchs220-siren to port over to the DCH-S160 water sensor.
+
+# Old documentation:
 
 This plugin exposes the functionality of D-Link's DCH-S220 Siren as a Switch.
 
