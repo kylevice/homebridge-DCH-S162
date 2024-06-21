@@ -3,7 +3,7 @@
 
 ### STILL A WORK IN PROGRESS
 Forked from mtflud/homebridge-dchs220-siren and to port over to the DCH-S160 water sensor.
-Forked from ... to DCH-162 water sensor.
+Forked from (https://github.com/bman46/homebridge-DCH-S160) to DCH-162 water sensor.
 
 # Adjusted documentation:
 
