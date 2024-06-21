@@ -7,7 +7,7 @@ Forked from (https://github.com/bman46/homebridge-DCH-S160) to DCH-162 water sen
 
 # Adjusted documentation:
 
-This plugin exposes the functionality of D-Link's DCH-S162 Water sensor a Switch.
+This plugin exposes the functionality of D-Link's DCH-S162 Water sensor as a switch.
 
 ## Install
 
