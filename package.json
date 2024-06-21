@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-dch-s160",
+  "name": "homebridge-dch-s162",
   "version": "1.0.0",
-  "description": "Homebridge plugin for D-Link's DCH-S160 Wi-Fi Water Detector",
+  "description": "Homebridge plugin for D-Link's DCH-S162 Wi-Fi Water Sensor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
