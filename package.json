@@ -12,10 +12,10 @@
   "engines": {
     "homebridge": ">=0.2.5"
   },
-  "homepage": "https://github.com/bman46/homebridge-DCH-S160",
+  "homepage": "https://github.com/kylevice/homebridge-DCH-S162",
   "repository": { 
     "type" : "git", 
-    "url" : "https://github.com/bman46/homebridge-DCH-S160.git"
+    "url" : "https://github.com/kylevice/homebridge-DCH-S162.git"
   },
   "author": "mtflud",
   "license": "ISC",
