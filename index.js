@@ -19,7 +19,7 @@ class WaterSensorAccessory {
         this.name = this.config.name || 'D-Link Water Sensor';
         this.pin = this.config.pin || 123456;
         this.ipAddress = this.config.ipAddress || '127.0.0.1';
-        this.detectorClient = new Siren(this.ipAddress, this.pin);
+        this.detectorClient = new WaterDetector(this.ipAddress, this.pin);
         this.updateInterval = (this.config.updateInterval && !isNaN(this.config.updateInterval) && this.config.updateInterval >= 100) ? this.config.updateInterval : false;
 
         //this.service = new Service.Switch(this.config.name);
