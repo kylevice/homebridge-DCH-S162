@@ -7,7 +7,7 @@ module.exports = (homebridge) => {
     Service = homebridge.hap.Service
     Characteristic = homebridge.hap.Characteristic
 
-    homebridge.registerAccessory('homebridge-DCH-S160', 'DCH-S160', WaterSensorAccessory)
+    homebridge.registerAccessory('homebridge-DCH-S162', 'DCH-S162', WaterSensorAccessory)
 }
 
 class WaterSensorAccessory {
@@ -16,7 +16,7 @@ class WaterSensorAccessory {
         this.config = config || {};
 
         // :: Config parameters
-        this.name = this.config.name || 'D-Link Water Detector';
+        this.name = this.config.name || 'D-Link Water Sensor';
         this.pin = this.config.pin || 123456;
         this.ipAddress = this.config.ipAddress || '127.0.0.1';
         this.detectorClient = new Siren(this.ipAddress, this.pin);
@@ -30,8 +30,8 @@ class WaterSensorAccessory {
     getServices() {
         const informationService = new Service.AccessoryInformation()
             .setCharacteristic(Characteristic.Manufacturer, 'd-link')
-            .setCharacteristic(Characteristic.Model, 'dch-S160')
-            .setCharacteristic(Characteristic.SerialNumber, 'dlink-dch-S160')
+            .setCharacteristic(Characteristic.Model, 'dch-S162')
+            .setCharacteristic(Characteristic.SerialNumber, 'dlink-dch-S162')
 
         // :: Fault status (Home does not seem to support it, but Eve app does)
         this.service.addOptionalCharacteristic(Characteristic.StatusFault);
@@ -55,21 +55,21 @@ class WaterSensorAccessory {
      */
     getStatus() {
         return new Promise((resolve, reject) => {
-            // :: Log In to the Siren
+            // :: Log In to the Water sensor
             this.detectorClient.login().then(status => {
                 if (status !== 'success') {
                     this.log(":: An error occurred while logging in to the siren, please check the credentials in config.");
-                    return reject("Error while logging in to the siren.");
+                    return reject("Error while logging in to the water sensor.");
                 }
                 // :: Retrieve playing status
                 this.detectorClient.getWaterStatus().then(status => {
                     return resolve(status);
                 }).catch(err => {
-                    this.log(":: An error occurred while retrieving siren status: " + err);
+                    this.log(":: An error occurred while retrieving water sensor status: " + err);
                     return reject(err);
                 });
             }).catch(err => {
-                this.log(":: An error occurred while logging in to the siren: " + err);
+                this.log(":: An error occurred while logging in to the water sensor: " + err);
                 return reject(err);
             });
         });
